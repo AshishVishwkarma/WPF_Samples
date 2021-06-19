@@ -1,0 +1,60 @@
+﻿<Window x:Class="HelloWorld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelloWorld"
+        mc:Ignorable="d"       
+        Title="MainWindow" SizeToContent="WidthAndHeight" Background="Aqua">
+    <!-- Title="MainWindow" Height="450" Width="800" >-->
+    <Window.Resources>
+        <!--<Style TargetType="Border" x:Key="BorderStyle">
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>-->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins\ResourceDictionary_NoSkin.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Button x:Name="Btn1" Content="Button" HorizontalAlignment="Left" Margin="66,333,0,0" VerticalAlignment="Top" Click="Btn1_Click" RenderTransformOrigin="-3.216,0.58">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="Blue" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <TextBlock x:Name="Text1" HorizontalAlignment="Left" Margin="56,78,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Margin="56,29,0,0" VerticalAlignment="Top"/>
+
+        <GroupBox Header="Select Skin:" Margin="487,10,187,303">
+            <UniformGrid x:Name="SkinChanger" Columns="1" FlowDirection="RightToLeft">
+                <RadioButton x:Name="RedSkin" Content="Red Skin" HorizontalAlignment="Left"/>
+                <RadioButton x:Name="BlueSkin" Content="Blue Skin" HorizontalAlignment="Left"/>
+                <RadioButton x:Name="GreenSkin" Content="Green Skin" HorizontalAlignment="Left"/>
+                <RadioButton x:Name="NoSkin" Content="No Skin" HorizontalAlignment="Left" IsChecked="True"/>
+            </UniformGrid>
+            <GroupBox.Effect>
+                <DropShadowEffect Opacity="0.25" />
+            </GroupBox.Effect>
+        </GroupBox>
+
+        <Grid x:Name="SkinableGrid" Grid.Row="1">
+            <Border Style="{DynamicResource BorderStyle}" Margin="350,10,0,0" Width="363" Height="100" >
+                <Grid>
+                    <Label Content="HELLO WORLD" Style="{DynamicResource HelloWorldSkinnable}" />
+                </Grid>
+                <Border.Effect>
+                    <DropShadowEffect Opacity="0.25" />
+                </Border.Effect>
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>
