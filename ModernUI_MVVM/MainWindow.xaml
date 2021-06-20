@@ -12,10 +12,10 @@
         Background="Transparent"
         AllowsTransparency="True">
 
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <viewModel:MainViewModel>
         </viewModel:MainViewModel>
-    </Window.DataContext>
+    </Window.DataContext>-->
     
     <Border Background="#272537"
             CornerRadius="20"

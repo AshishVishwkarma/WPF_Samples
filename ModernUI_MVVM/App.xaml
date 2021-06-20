@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:ModernUI"
              xmlns:viewModel="clr-namespace:ModernUI.MVVM.ViewModel"
              xmlns:view="clr-namespace:ModernUI.MVVM.View"
-             StartupUri="MainWindow.xaml">
+             >    <!--StartupUri="MainWindow.xaml"-->
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -13,10 +13,14 @@
                 <ResourceDictionary Source="Theme/ButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
+            <!-- This template applies a HomeView to an instance of the HomeViewModel class
+                 shown in the main window. -->
             <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
                 <view:HomeView/>
             </DataTemplate>
 
+            <!-- This template applies a DiscoveryView to an instance of the DiscoveryViewModel class
+                 shown in the main window. -->
             <DataTemplate DataType="{x:Type viewModel:DiscoveryViewModel}">
                 <view:DiscoveryView/>
             </DataTemplate>

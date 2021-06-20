@@ -1,5 +1,4 @@
-﻿using ModernUI.MVVM.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,15 +20,9 @@ namespace ModernUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        private MainViewModel mainViewModel = null;
         public MainWindow()
         {
             InitializeComponent();
-
-            // Subscribe to the RequestClose event
-            mainViewModel = new MainViewModel();
-            this.DataContext = mainViewModel;
-            mainViewModel.RequestClose += delegate (object sender, EventArgs args) { this.Close(); };
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)

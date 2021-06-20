@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{EE5AEDC0-270C-4B94-A1C1-6C00C70BCA41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernUI", "ModernUI\ModernUI.csproj", "{634A168C-4415-4C04-B01B-985947A332BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModernUI_MVVM", "ModernUI_MVVM\ModernUI_MVVM.csproj", "{634A168C-4415-4C04-B01B-985947A332BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
