@@ -46,6 +46,7 @@
                     <Image Width="243"
                            Height="250"
                            Source="/Images/man.jpg"
+                           RenderOptions.BitmapScalingMode="Fant"
                            HorizontalAlignment="right"
                            VerticalAlignment="Bottom" 
                            Margin="0,-30,-41,-20" 

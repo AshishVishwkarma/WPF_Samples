@@ -4,10 +4,11 @@ using System;
 
 namespace ModernUI.MVVM.ViewModel
 {
-    class MainViewModel : ObservableObject
+    class MainViewModel : ViewModelBase
     {
         public RelayCommand HomeViewCommand { get; set; }
         public RelayCommand DiscoveryViewCommand { get; set; }
+        public RelayCommand CloseCommand { get; set; }
 
 
         public HomeViewModel HomeVM { get; set; }
@@ -40,6 +41,12 @@ namespace ModernUI.MVVM.ViewModel
             {
                 CurrentView = DiscoveryVM;
             });
+
+            CloseCommand = new RelayCommand(o => 
+            {
+                OnRequestClose();
+            });
         }
+
     }
 }
