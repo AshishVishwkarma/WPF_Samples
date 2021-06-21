@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,5 +33,11 @@ namespace ModernUI
                 DragMove();
             }
         }
+
+        //protected override void OnClosing(CancelEventArgs e)
+        //{
+        //    //base.OnClosing(e);
+        //    Application.Current.Shutdown();
+        //}
     }
 }

@@ -24,7 +24,8 @@ namespace ModernUI
             // Subscribe to the RequestClose event
             // Close the window when the ViewModel asks to be closed.
             //mainViewModel.RequestClose += delegate (object sender, EventArgs args) { this.Close(); };
-            mainViewModel.RequestClose += delegate { window.Close(); };
+            //mainViewModel.RequestClose += delegate { window.Close(); };
+            mainViewModel.RequestClose += delegate { Environment.Exit(0); };
 
             // Allow all controls in the window to bind to the ViewModel by setting the
             // DataContext, which propagates down the element tree.

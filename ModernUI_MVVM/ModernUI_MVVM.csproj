@@ -106,9 +106,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MVVM\Model\BusinessFeedProvider.cs" />
+    <Compile Include="MVVM\Model\Observable.cs" />
+    <Compile Include="MVVM\Model\SportFeedProvider.cs" />
     <Compile Include="MVVM\ViewModel\DiscoveryViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\BusinessFeedViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\SportFeedViewModel.cs" />
     <Compile Include="MVVM\View\DiscoveryView.xaml.cs">
       <DependentUpon>DiscoveryView.xaml</DependentUpon>
     </Compile>
@@ -141,9 +146,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="MVVM\Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\man.jpg" />
   </ItemGroup>
